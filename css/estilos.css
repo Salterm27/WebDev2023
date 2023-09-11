@@ -1,0 +1,54 @@
+navbar{
+/*main component of navbar. Cancontain a Logo, a Title, and a list of items. Modifies a div*/
+
+}
+navbar-logo{
+/*site logo used in navbar. Modifies a div*/
+}
+navbar-title{
+/*title for the application. Modifies a div*/
+
+}
+navbar-items{
+/*list of navigation links on the header which contain individual items. Modifies a ul*/
+}
+navbar-item{
+/*navigation link to a section of the site. Modifies a li*/
+}
+navbar-nestedItems{
+/*navigation link which has a nested list. */
+}
+hero{
+/*media block that can have a background image, a title, a description and a button. Modifies a div*/
+}
+hero-title{
+/*Title for the Hero Block. Modifies h1*/
+}
+hero-body{
+/*Display block for the description and buttons. Modifies a p*/
+
+}
+hero-description{
+/*Description for the Hero Block. Modifies a p*/
+}
+hero-button{
+/*button below the Hero Body. m*/
+}
+banner-left{
+/*Media Section which has the card on the left and the content on the right. Modifies a div*/
+}
+banner-right{
+/*Media Section which has the card on the right and the content on the right. Modifies a div*/
+}
+banner-card{
+/*modifies a card to be placed within a Banner*/
+}
+banner-body{
+/**/
+}
+banner-body-title{
+/**/
+}
+banner-body-text{
+/**/
+}
