@@ -1,54 +1,101 @@
-navbar{
-/*main component of navbar. Cancontain a Logo, a Title, and a list of items. Modifies a div*/
+/* Aquí dentro puedo colocar reglas css */
+* {
+    box-sizing: border-box;
+}
 
-}
-navbar-logo{
-/*site logo used in navbar. Modifies a div*/
-}
-navbar-title{
-/*title for the application. Modifies a div*/
+    .center{
+        justify-content: center;
+    }
+    .xl-container{
+        
+        width: 100%;    
+    }
+    .l-container{
+        width: 75%;   
+    }
+    .m-container{
+        width: 50%;    
+    }
+    .s-container{
+        width: 25%;        
+    }
+    /*NAVBAR ELEMENT*/
+    /*NAVBAR ELEMENT*/
+    /*NAVBAR ELEMENT*/
 
-}
-navbar-items{
-/*list of navigation links on the header which contain individual items. Modifies a ul*/
-}
-navbar-item{
-/*navigation link to a section of the site. Modifies a li*/
-}
-navbar-nestedItems{
-/*navigation link which has a nested list. */
-}
-hero{
-/*media block that can have a background image, a title, a description and a button. Modifies a div*/
-}
-hero-title{
-/*Title for the Hero Block. Modifies h1*/
-}
-hero-body{
-/*Display block for the description and buttons. Modifies a p*/
+    .navbar{
+    /*main component of navbar. Cancontain a Logo, a Title, and a list of items. Modifies a div*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: black;
+        align-items: center;
+        
+    }
+    .navbar-branding{
+        display: flex;
+        color: white;
+    }
+    .navbar-logo-white{
+        display: flex;
+        width: 100%;
+        max-width: 100px;
+    /*site logo used in navbar. Modifies a div*/
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(103%) contrast(102%);
+    }
+    .navbar-title{
+    /*title for the application. Modifies a div*/
+        display: flex;
+        color: inherit;
+    }
+    .navbar-items{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+    .navbar-item{
+        display: flex;
+        color: white;
+        justify-content: space-around;
+    }
+    .navbar-link{
+        display: flex;
+    }
 
-}
-hero-description{
-/*Description for the Hero Block. Modifies a p*/
-}
-hero-button{
-/*button below the Hero Body. m*/
-}
-banner-left{
-/*Media Section which has the card on the left and the content on the right. Modifies a div*/
-}
-banner-right{
-/*Media Section which has the card on the right and the content on the right. Modifies a div*/
-}
-banner-card{
-/*modifies a card to be placed within a Banner*/
-}
-banner-body{
-/**/
-}
-banner-body-title{
-/**/
-}
-banner-body-text{
-/**/
-}
+    /* HERO ELEMENT */
+    /* HERO ELEMENT */
+    /* HERO ELEMENT */
+    .hero{
+    /*media block that can have a background image, a title, a description and a button. Modifies a div*/
+    }
+    .hero-title{
+    /*Title for the Hero Block. Modifies h1*/
+    }
+    .hero-body{
+    /*Display block for the description and buttons. Modifies a p*/
+
+    }
+    .hero-description{
+    /*Description for the Hero Block. Modifies a p*/
+    }
+    .hero-button{
+    /*button below the Hero Body.*/
+    }
+
+    /* BANNER ELEMENT */
+    .banner{
+    /*Media Section which has the card on the left and the content on the right. Modifies a div*/
+
+    }
+    .banner-card{
+    /*modifies a card to be placed within a Banner*/
+    }
+    .banner-body{
+    /**/
+    }
+    .banner-body-title{
+    /**/
+    }
+    .banner-body-text{
+    /**/
+    }
