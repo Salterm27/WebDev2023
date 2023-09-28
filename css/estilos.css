@@ -2,22 +2,42 @@
 * {
     box-sizing: border-box;
 }
-
+    .left-align{
+        flex-direction: row;
+    }
+    .right-align{
+        flex-direction: row-reverse;
+    }
     .center{
         justify-content: center;
+        align-items: center;
+        
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
     }
     .xl-container{
-        
         width: 100%;    
     }
     .l-container{
-        width: 75%;   
+        width: 75%;
+        margin-right: 12.5%;
+        margin-left: 12.5%;   
     }
     .m-container{
         width: 50%;    
+        margin-right: 25%;
+        margin-left: 25%;
     }
     .s-container{
-        width: 25%;        
+        width: 25%; 
+        margin-right: 37.5%;
+        margin-left: 37.5%;       
+    }
+    .no-margin{
+        margin: 0;
     }
     /*NAVBAR ELEMENT*/
     /*NAVBAR ELEMENT*/
@@ -34,7 +54,9 @@
     }
     .navbar-branding{
         display: flex;
+        flex-direction: row;
         color: white;
+        margin: 0;
     }
     .navbar-logo-white{
         display: flex;
@@ -57,45 +79,101 @@
         display: flex;
         color: white;
         justify-content: space-around;
+        margin: 0;
     }
     .navbar-link{
         display: flex;
+        margin: 0;
     }
 
     /* HERO ELEMENT */
     /* HERO ELEMENT */
     /* HERO ELEMENT */
     .hero{
-    /*media block that can have a background image, a title, a description and a button. Modifies a div*/
+        /*media block that can have a background image, a title, a description and a button. Modifies a div*/
+        display: flex;
+        flex-direction: column;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 300px;
+        color: white;
+
     }
     .hero-title{
     /*Title for the Hero Block. Modifies h1*/
+        display: flex;
+        margin-top: 1em;
+        margin-left: 17%;
+        
     }
     .hero-body{
     /*Display block for the description and buttons. Modifies a p*/
-
+        display: flex;
+        flex-direction: column;
+        margin-left: 17%;
+        margin-bottom: 1em;
     }
     .hero-description{
     /*Description for the Hero Block. Modifies a p*/
+        display: flex;
+        
     }
     .hero-button{
     /*button below the Hero Body.*/
+        display: block;
+        background-color: white;
+        
+        border: 40px;
+        border-radius: 3px;
+        
+
+        width: fit-content;
+        padding: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: black;
+        text-decoration: none;
     }
 
     /* BANNER ELEMENT */
     .banner{
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
-
+        display: flex;
+        height: 500px;
+        padding: 3em;
+        
     }
     .banner-card{
     /*modifies a card to be placed within a Banner*/
+        display: flex;
+        width: 40%;
+        background-color: black;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 10px;
+        border-radius: 1rem;
+
+        
     }
     .banner-body{
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
     /**/
     }
     .banner-body-title{
+        display: flex;
     /**/
     }
     .banner-body-text{
+        display: flex;
     /**/
+    }
+
+    .footer{
+        background-color: crimson;
+        color: white;
     }
