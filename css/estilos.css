@@ -83,7 +83,9 @@
     }
     .navbar-link{
         display: flex;
+        color: white;
         margin: 0;
+        text-decoration: none;
     }
 
     /* HERO ELEMENT */
@@ -119,21 +121,20 @@
         display: flex;
         
     }
-    .hero-button{
+    .hero-button-primary{
     /*button below the Hero Body.*/
         display: block;
-        background-color: white;
-        
-        border: 40px;
-        border-radius: 3px;
-        
-
         width: fit-content;
+        min-width: 7rem;
         padding: 0.5em;
         padding-left: 1em;
         padding-right: 1em;
+
+        border-radius: 10px;
+
+        background-color: white;
         color: black;
-        text-decoration: none;
+        text-align: center;
     }
 
     /* BANNER ELEMENT */
