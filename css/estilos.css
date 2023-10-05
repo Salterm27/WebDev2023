@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
     .left-align{
         flex-direction: row;
@@ -138,6 +138,10 @@
         color: black;
         text-align: center;
     }
+    .hero-button-primary:hover{
+        background-color: lightblue;
+        color: white;
+    }
 
     /* BANNER ELEMENT */
     .banner{
@@ -191,7 +195,7 @@
     /**/
     }
     .banner-cta{
-       font-size: large; 
+       font-weight: 100px; 
     }
 
     .footer{
