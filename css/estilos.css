@@ -64,6 +64,8 @@
         display: flex;
         width: 100%;
         max-width: 100px;
+        margin-right: 1%;
+        margin-left: 1%;
     /*site logo used in navbar. Modifies a div*/
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(103%) contrast(102%);
     }
@@ -88,6 +90,7 @@
         color: white;
         margin: 0;
         text-decoration: none;
+        
     }
 
     /* HERO ELEMENT */
@@ -116,11 +119,13 @@
         display: flex;
         flex-direction: column;
         margin-left: 17%;
+        margin-right: 17%;
         margin-bottom: 1em;
     }
     .hero-descripcion{
     /*Description for the Hero Block. Modifies a p*/
-        display: flex;
+        
+        width: inherit;
         
     }
     .hero-boton-primario{
@@ -131,9 +136,7 @@
         padding: 0.5em;
         padding-left: 1em;
         padding-right: 1em;
-
         border-radius: 10px;
-
         background-color: white;
         color: black;
         text-align: center;
