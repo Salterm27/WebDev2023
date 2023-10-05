@@ -4,41 +4,41 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-    .left-align{
+    .alinear-izquierda{
         flex-direction: row;
     }
-    .right-align{
+    .alinear-derecha{
         flex-direction: row-reverse;
     }
-    .center{
+    .centro{
         justify-content: center;
         align-items: center;
         
     }
 
-    .container{
+    .contenedor{
         display: flex;
         flex-direction: column;
     }
-    .xl-container{
+    .xl-contenedor{
         width: 100%;    
     }
-    .l-container{
+    .l-contenedor{
         width: 75%;
         margin-right: 12.5%;
         margin-left: 12.5%;   
     }
-    .m-container{
+    .m-contenedor{
         width: 50%;    
         margin-right: 25%;
         margin-left: 25%;
     }
-    .s-container{
+    .s-contenedor{
         width: 25%; 
         margin-right: 37.5%;
         margin-left: 37.5%;       
     }
-    .no-margin{
+    .sin-margen{
         margin: 0;
     }
     /*NAVBAR ELEMENT*/
@@ -60,14 +60,14 @@
         color: white;
         margin: 0;
     }
-    .navbar-logo-white{
+    .navbar-logo-blanco{
         display: flex;
         width: 100%;
         max-width: 100px;
     /*site logo used in navbar. Modifies a div*/
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(103%) contrast(102%);
     }
-    .navbar-title{
+    .navbar-titulo{
     /*title for the application. Modifies a div*/
         display: flex;
         color: inherit;
@@ -104,26 +104,26 @@
         color: white;
 
     }
-    .hero-title{
+    .hero-titulo{
     /*Title for the Hero Block. Modifies h1*/
         display: flex;
         margin-top: 1em;
         margin-left: 17%;
         
     }
-    .hero-body{
+    .hero-cuerpo{
     /*Display block for the description and buttons. Modifies a p*/
         display: flex;
         flex-direction: column;
         margin-left: 17%;
         margin-bottom: 1em;
     }
-    .hero-description{
+    .hero-descripcion{
     /*Description for the Hero Block. Modifies a p*/
         display: flex;
         
     }
-    .hero-button-primary{
+    .hero-boton-primario{
     /*button below the Hero Body.*/
         display: block;
         width: fit-content;
@@ -138,7 +138,7 @@
         color: black;
         text-align: center;
     }
-    .hero-button-primary:hover{
+    .hero-boton-primario:hover{
         background-color: lightblue;
         color: white;
     }
@@ -151,34 +151,33 @@
         padding: 3em;
         
     }
-    .banner-inner{
+    .banner-interior{
         /*Media Section which has the card on the left and the content on the right. Modifies a div*/
             display: flex;
             background-color: lightblue;
             border: 10px;
             border-radius: 1rem;
-            
         
         }
-    .banner-card{
+    .banner-tarjeta{
     /*modifies a card to be placed within a Banner*/
         display: flex;
         width: 40%;
         background-color: black;
-        
         border: 10px;
         border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
     }
 
-    .banner-card img {
+    .banner-tarjeta img {
         display: flex;
-        border-radius: 1rem;
-        width: 100%;
-        height: 100%;
+        border-radius: 1rem;      
         object-fit: cover;
         object-position: center;
       }
-    .banner-body{
+    .banner-cuerpo{
         display: flex;
         width: 60%;
         flex-direction: column;
@@ -186,11 +185,11 @@
         margin-right: 2rem;
     /**/
     }
-    .banner-body-title{
+    .banner-cuerpo-titulo{
         height: fit-content;
     /**/
     }
-    .banner-body-text{
+    .banner-cuerpo-texto{
         word-wrap: break-word;
     /**/
     }
