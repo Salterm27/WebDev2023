@@ -130,7 +130,6 @@
     color: white;
     margin: 0;
     text-decoration: none;
-
 }
 
 /* HERO ELEMENT */
@@ -208,7 +207,8 @@
     display: flex;
     border: 10px;
     border-radius: 1rem;
-
+    /*arreglar unidades*/
+    
 }
 
 .banner-tarjeta {
@@ -220,7 +220,9 @@
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
-    overflow: hidden
+    overflow: hidden;
+    object-fit: scale-down;
+    
 }
 
 .banner-tarjeta img {
@@ -228,6 +230,8 @@
     border-radius: 1rem;
     object-fit: cover;
     object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .banner-cuerpo {
@@ -268,15 +272,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 
 .tarjeta-logo {
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    
 
 
 }
@@ -285,29 +295,40 @@
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
     display: flex;
     border: 2px solid;
-    border-radius: 1rem;
+    border-radius: 16px;
     flex-direction: row;
     min-height: 141px;
     min-width: 200px;
     color: black;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
 }
 
 .tarjeta-logo-interior img {
     display: flex;
     max-width: 48px;
-    margin-right: 10%;
-    margin-left: 10%;
-
-
+    margin-right: 16px;
+    margin-left: 16px;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+    
 }
 
 .tarjeta-logo-cuerpo {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 32px;
+    margin-right: 32px;
     text-align: center;
     justify-content: center;
+    width: 145px;
+    
+    
+    
     /**/
 }
 
@@ -317,6 +338,7 @@
     text-align: center;
     justify-content: center;
     font-size: large;
+    
     /**/
 }
 
