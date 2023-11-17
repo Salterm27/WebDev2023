@@ -1,5 +1,6 @@
 /* Aquí dentro puedo colocar reglas css */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Agbalumo');
 
 * {
     box-sizing: border-box;
@@ -116,21 +117,26 @@
     display: flex;
     list-style: none;
     justify-content: space-around;
+    margin-right: 50px;
 }
 
 .navbar-item {
     display: flex;
     color: white;
     justify-content: space-around;
-    margin: 0;
+    margin-right: 10px;
+    
+    
 }
 
 .navbar-link {
     display: flex;
     color: white;
-    margin: 0;
     text-decoration: none;
 }
+.navbar-link:hover {
+    color: red;
+}    
 
 /* HERO ELEMENT */
 /* HERO ELEMENT */
@@ -254,7 +260,14 @@
 }
 
 .banner-cta {
+    font-family: 'agbalumo';
     font-size: larger;
+    color: inherit;
+
+}
+.banner-cta:hover {
+    font-size: larger;
+    color: brown;
 }
 
 .titulo-seccion {
@@ -286,8 +299,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     flex-grow: 1;
-    
-
 
 }
 
@@ -315,7 +326,6 @@
     flex-grow: 1;
     flex-basis: 0;
     flex-shrink: 0;
-    
 }
 
 .tarjeta-logo-cuerpo {
@@ -326,9 +336,6 @@
     text-align: center;
     justify-content: center;
     width: 145px;
-    
-    
-    
     /**/
 }
 
