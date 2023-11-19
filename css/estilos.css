@@ -113,27 +113,39 @@
     color: inherit;
 }
 
-.navbar-items {
+.navbar-nav {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    
     margin-right: 50px;
+    
+}
+
+.navbar-items {
+    display: flex;
+    list-style: none;   
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .navbar-item {
     display: flex;
     color: white;
-    justify-content: space-around;
-    margin-right: 10px;
-    
-    
 }
 
 .navbar-link {
     display: flex;
     color: white;
-    text-decoration: none;
+    text-decoration: none;   
 }
+
+.navbar-link-disabled {
+    display: flex;
+    color: gray;
+    text-decoration: none;   
+    cursor: not-allowed;
+}
+
 .navbar-link:hover {
     color: red;
 }    
@@ -260,16 +272,20 @@
 }
 
 .banner-cta {
+    display: flex;
+    flex-shrink: 1;
     font-family: 'agbalumo';
     font-size: larger;
+    background-color: inherit;
     color: inherit;
+    border-radius: 5px;
 
 }
 .banner-cta:hover {
     font-size: larger;
     color: brown;
+    border-color: brown;
 }
-
 .titulo-seccion {
     display: flex;
     font-size: 50px;

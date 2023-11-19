@@ -15,13 +15,14 @@
             <img class="navbar-logo-blanco" src="./img/logo/compass-regular.svg" alt="logo"> <!-- My logo goes here -->
             <h1 class="navbar-titulo"> #BALeader</h1>
         </div>
-        <div class="contenedor s-contenedor sin-margen">
-            <nav>
+        <div class="contenedor m-contenedor sin-margen">
+            <nav class="navbar-nav">
                 <ul class=" navbar-items">
                     <li class="navbar-item"> <a class="navbar-link" href="#Onboarding"> Onboarding </a> </li>
                     <li class="navbar-item"> <a class="navbar-link" href="#Culture"> Cultura </a> </li>
                     <li class="navbar-item"> <a class="navbar-link" href="#Pathways"> Pathways </a> </li>
                     <li class="navbar-item"> <a class="navbar-link" href="#Improve"> Mejora </a> </li>
+                    <li class="navbar-item"> <a class="navbar-link-disabled" href="#" > Mis Cursos</a> </li>
                 </ul>
             </nav>
         </div>
@@ -59,7 +60,7 @@
                     <p class="banner-cuerpo-texto"> Nuestro <em> equipo de Leadership Onboarding </em> va a acompa;arte
                         durante tus primeros pasos con un <strong> Jumpstart de liderazgo </strong> y a ayudarte a
                         encontrar tu <strong>#Camino</strong></p>
-                    <a class="banner-cta" href="https://forms.gle/dbjvX4tadpeXx2478"> Iniciar mi Camino!!</a>
+                    <button class="banner-cta" id="Onboarding-Event"> Anotarme para iniciar mi Camino!! </button>
 
 
                 </div>
@@ -85,10 +86,7 @@
                     <p class="banner-cuerpo-texto">El <em> Equipo Corporativo de Cultura </em> se encarga de ayudar a
                         traer estos conceptos a tierra y a encontraar tu inspiracion para <strong> #Liderar </strong>
                     </p>
-                    <a class="banner-cta"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSc6jQIc8cHvxunFoXyG6r1o2Wuhq5Ise_qGWnWo8AG3VQVgAw/viewform">
-                        Participa en nuestros eventos!</a>
-
+                    <button class="banner-cta"> Anotarme en nuestros eventos!</button>
                 </div>
             </div>
 
@@ -188,5 +186,21 @@
         Sitio Registrado por Sebastián Alterman. </br>Todos los derechos quedan reservados.
     </footer>
 </body>
+
+<script type="text/javascript" >
+    //Setup
+    //TODO read from LocalStorage list. If Empty, do nothing. If Has Something, create Array and enable Cart
+    //TODO populateCourses. Read from JSON Config file and add the Banner CTA List. Attatch the events
+
+    //Functions
+    //TODO Add2Cart. Read Array. If item is not there, add then Push to Cart. If item is there, dont add and alert user.
+    //TODO UpdateCart. Refresh Cart Icon (enabled / disabled). Push to LocalStorage.
+
+    //AttatchEvent
+    //TODO until populateCourses is done, manually attatch the events
+
+
+
+</script>
 
 </html>
