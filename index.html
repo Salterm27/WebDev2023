@@ -222,10 +222,12 @@
             if (tempFiles.length === 0){
                 console.log('Local Storage is Empty');
                 document.getElementById('MisCursos').className= 'navbar-link-disabled';
+                document.getElementById('MisCursos').innerHTML = 'Mis Cursos (0)';
             }
             else{
                 console.log('Local Storage has something in it')
                 document.getElementById('MisCursos').className= 'navbar-link';
+                document.getElementById('MisCursos').innerHTML= 'Mis Cursos ('+ tempFiles.length +')';
                 
             }
         }
