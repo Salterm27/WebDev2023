@@ -209,6 +209,7 @@
 .hero-boton-primario:hover {
     color: #001524;
     background-color: #D6CC99;
+    cursor: pointer;
 }
 
 /* BANNER ELEMENT */
@@ -285,6 +286,7 @@
     font-size: larger;
     color: brown;
     border-color: brown;
+    cursor: pointer;
 }
 .titulo-seccion {
     display: flex;

@@ -22,7 +22,7 @@
                     <li class="navbar-item"> <a class="navbar-link" href="#Culture"> Cultura </a> </li>
                     <li class="navbar-item"> <a class="navbar-link" href="#Pathways"> Pathways </a> </li>
                     <li class="navbar-item"> <a class="navbar-link" href="#Improve"> Mejora </a> </li>
-                    <li class="navbar-item"> <a class="navbar-link-disabled" href="#" > Mis Cursos</a> </li>
+                    <li class="navbar-item"> <a class="navbar-link-disabled" href="#" id="MisCursos"> Mis Cursos</a> </li>
                 </ul>
             </nav>
         </div>
@@ -86,7 +86,7 @@
                     <p class="banner-cuerpo-texto">El <em> Equipo Corporativo de Cultura </em> se encarga de ayudar a
                         traer estos conceptos a tierra y a encontraar tu inspiracion para <strong> #Liderar </strong>
                     </p>
-                    <button class="banner-cta"> Anotarme en nuestros eventos!</button>
+                    <button class="banner-cta" id="Culture-Event" > Anotarme en nuestros eventos!</button>
                 </div>
             </div>
 
@@ -189,17 +189,61 @@
 
 <script type="text/javascript" >
     //Setup
-    //TODO read from LocalStorage list. If Empty, do nothing. If Has Something, create Array and enable Cart
-    //TODO populateCourses. Read from JSON Config file and add the Banner CTA List. Attatch the events
+    //TODO OnloadOrchestration
+    let tempFiles = window.localStorage;   
+    let myCart; 
+    UpdateCart(tempFiles);
+    
+    //TODO populateCourses.
+        // Read from JSON Config file and add the Banner CTA List. Attatch the events
 
     //Functions
-    //TODO Add2Cart. Read Array. If item is not there, add then Push to Cart. If item is there, dont add and alert user.
-    //TODO UpdateCart. Refresh Cart Icon (enabled / disabled). Push to LocalStorage.
+    //TODO PackageItem
+        //stringifies an items payload
 
+        // Read LocalStorage. If item is not there, add then Push to Cart. If item is there, dont add and alert user.
+        function Add2Cart(){
+            console.log('button pressed');
+            let i;
+            let item = 'test';
+            if (localStorage.getItem(item) != null ){
+                alert('Ya estas anotado! Verifica Tus Cursos.');
+            }
+            else {
+                console.log('Before Adding'+localStorage.length);
+                localStorage.setItem(item,'payload');
+                console.log('After Adding');
+                UpdateCart(localStorage);
+            }
+        }
+        
+        function UpdateCart(tempFiles){
+            // If Empty, do nothing. If Has Something,  enable Cart
+            if (tempFiles.length === 0){
+                console.log('Local Storage is Empty');
+                document.getElementById('MisCursos').className= 'navbar-link-disabled';
+            }
+            else{
+                console.log('Local Storage has something in it')
+                document.getElementById('MisCursos').className= 'navbar-link';
+                
+            }
+        }
+    //TODO ShowCart
+        //displays all elements in the cart
+    function ShowCart(tempFiles){
+        let i;
+        for(i=0; i<tempFiles.length;i++){
+            console.log(tempFiles.key(i));
+        }
+        
+
+    }
     //AttatchEvent
-    //TODO until populateCourses is done, manually attatch the events
-
-
+    //TODO Manually AttatchEvents
+        //until populateCourses is done, manually attatch the events
+    document.getElementById('Onboarding-Event').addEventListener('click', Add2Cart);
+    
 
 </script>
 
