@@ -196,11 +196,11 @@
     /*button below the Hero Body.*/
     display: block;
     width: fit-content;
-    min-width: 7rem;
-    padding: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 10px;
+    min-width: 112 px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 16px;
     background-color: #FDE5D4;
     color: #001524;
     text-align: center;
@@ -217,7 +217,8 @@
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
     display: flex;
     height: 500px;
-    padding: 3em;
+    padding: 48px;
+    flex
 
 }
 
@@ -225,7 +226,7 @@
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
     display: flex;
     border: 10px;
-    border-radius: 1rem;
+    border-radius: 16px;
     /*arreglar unidades*/
     
 }
@@ -236,17 +237,16 @@
     width: 40%;
     background-color: black;
     border: 10px;
-    border-radius: 1rem;
+    border-radius: 16px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     object-fit: scale-down;
-    
 }
 
 .banner-tarjeta img {
     display: flex;
-    border-radius: 1rem;
+    border-radius: 16px;
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -257,8 +257,9 @@
     display: flex;
     width: 60%;
     flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
     /**/
 }
 
