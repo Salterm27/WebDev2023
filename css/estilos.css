@@ -218,7 +218,7 @@
     display: flex;
     height: 500px;
     padding: 48px;
-    flex
+
 
 }
 
@@ -243,7 +243,6 @@
     overflow: hidden;
     object-fit: scale-down;
 }
-
 .banner-tarjeta img {
     display: flex;
     border-radius: 16px;
@@ -373,4 +372,21 @@
     background-color: #445D48;
     color: #FDE5D4;
 
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.cart-item-text{
+    display: flex;
+}
+.cart-item-remove{
+    display: flex;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    text-align: center;
 }
