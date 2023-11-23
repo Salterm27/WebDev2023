@@ -45,7 +45,7 @@
         //insert the new node with its content into the cart
         myCart.appendChild(myNewItem);
                 
-        UpdateCart(localStorage);
+        UpdateCart();
     }
 
 
@@ -69,47 +69,49 @@
         myCartItem.remove();
                 
         //updateCart
-        UpdateCart(localStorage);
+        UpdateCart();
     }
 
     function flushCart(){
         //removes everything from the cart
 
         while (localStorage.key(0)!=null){
-            RemoveFromCart(localStorage.key(0));
+            RemoveFromCart(tempFiles.key(0));
         }
         alert("Te has retirado de todos tus cursos.")
         
     }
-    function mountCart(tempFiles){
+    function mountCart(){
         let i;
         let myCart = document.getElementById('cart');
-        if (localStorage.length > 0){
-            for(i=0; i<localStorage.length; i++ ){
+        console.log(localStorage.length);
+        let max = localStorage.length;
+        if (max > 0){
+            for(i=0; i<max; i++ ){
                 addCartDisplayItem(myCart,localStorage.key(i));
             }
         }
-        UpdateCart(tempFiles)
+        UpdateCart()
 
     }
-    function UpdateCart(tempFiles){
+    function UpdateCart(){
         // If Empty, do nothing. If Has Something,  enable Cart
-        if (tempFiles.length === 0){
+        if (localStorage.length === 0){
             document.getElementById('MisCursos').className= 'navbar-link-disabled';
             document.getElementById('MisCursos').innerHTML = 'Mis Cursos (0)';
 
         }
         else{
             document.getElementById('MisCursos').className= 'navbar-link';
-            document.getElementById('MisCursos').innerHTML= 'Mis Cursos ('+ tempFiles.length +')';
+            document.getElementById('MisCursos').innerHTML= 'Mis Cursos ('+ localStorage.length +')';
         }
     }
 
-    function LogCart(tempFiles){
+    function LogCart(){
         //logs all elements in the cart
         let i;
-        for(i=0; i<tempFiles.length;i++){
-            console.log(tempFiles.key(i));
+        for(i=0; i<localStorage.length;i++){
+            console.log(localStorage.key(i));
         }
     }
 
