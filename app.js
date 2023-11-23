@@ -25,7 +25,6 @@
             //add to cart display list 
             addCartDisplayItem(myCart,item);
             //alert("Gracias por anotarte a " + item + ".");
-            notifyAction("Gracias por anotarte a " + item + ".");
         }
     }
 
