@@ -216,10 +216,9 @@
 .banner {
     /*Media Section which has the card on the left and the content on the right. Modifies a div*/
     display: flex;
-    height: 500px;
-    padding: 48px;
-
-
+    min-height: 300px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 .banner-interior {
@@ -280,7 +279,8 @@
     background-color: inherit;
     color: inherit;
     border-radius: 5px;
-
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 .banner-cta:hover {
     font-size: larger;
@@ -380,7 +380,15 @@
     justify-content: space-between;
 
 }
-.cart-item-text{
+.cart-item-Body{
+    display: flex;
+    flex-direction: column;
+    
+}
+.cart-item-Title{
+    display: flex;
+}
+.cart-item-Description{
     display: flex;
 }
 .cart-item-remove{
@@ -389,6 +397,7 @@
     background-color: brown;
     color: white;
     text-align: center;
+    vertical-align: middle;
 }
 .custom-alert {
     display: inline-block;

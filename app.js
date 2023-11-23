@@ -3,7 +3,8 @@
     let tempFiles = window.localStorage;   
     let myCart; 
     mountCart();
-    
+    attatchEvents2Courses( document.getElementById('OnboardingCourses'));
+    attatchEvents2Courses(document.getElementById('CultureCourses'));
     //TODO populateCourses.
         // Read from JSON Config file and add the Banner CTA List. Attatch the events
 
@@ -12,31 +13,42 @@
         //stringifies an items payload
 
     
-    function Add2Cart(item){
+    function Add2Cart(item, aTitle, aDate, aTime){
         // Read LocalStorage. If item is not there, add then Push to Cart. If item is there, dont add and alert user.
         let myCart = document.getElementById('cart');
-
+        
         if (localStorage.getItem(item) != null ){
             alert('Ya estas anotado! Verifica Tus Cursos.');
         }
         else {
+            let payload = JSON.stringify([aTitle,aDate,aTime]);
+            console.log(payload);
             //add to LocalStorage
-            localStorage.setItem(item,'payload');                           
+            localStorage.setItem(item,payload);                           
             //add to cart display list 
-            addCartDisplayItem(myCart,item);
+            addCartDisplayItem(myCart,item, aTitle, aDate, aTime);
             //alert("Gracias por anotarte a " + item + ".");
         }
     }
 
-    function addCartDisplayItem(myCart,item){
+    function addCartDisplayItem(myCart,item, Title, Time, Date){
         let myNewItem = SimpleElementBuilder('li','cart-item','');
         myNewItem.id = item;
+        
         //create the description
-        let itsChild = SimpleElementBuilder ('h5','cart-item-text',item);
-        myNewItem.appendChild(itsChild);
+        let itsTextBox = SimpleElementBuilder ('div','cart-item-Body','');
+        myNewItem.appendChild(itsTextBox);
+        //create the title
+        let itsTitle = SimpleElementBuilder ('h5','cart-item-text',Title);
+        itsTextBox.appendChild(itsTitle);
+        //create the title Description
+        let itsDetails = SimpleElementBuilder ('p','cart-item-text',Time + ' - ' + Date);
+        itsTextBox.appendChild(itsDetails);
+        
+        myNewItem.appendChild(itsTextBox);
         
         // create the button for the cart remove
-        itsChild = SimpleElementBuilder('button','cart-item-remove','Desinscribirme');
+        let itsChild = SimpleElementBuilder('button','cart-item-remove','Desinscribirme');
         
         //attatch the buttons event listener
         itsChild.addEventListener('click', (e) => {RemoveFromCart(item)});
@@ -59,7 +71,7 @@
         localStorage.removeItem(item);
                 
         //remove from Cart Display
-        removeCardDisplayItem(item);   
+        removeCardDisplayItem(item);
         }
     }
 
@@ -67,7 +79,7 @@
         //Remove from Cart Display List
         let myCartItem = document.getElementById(item);
         myCartItem.remove();
-                
+
         //updateCart
         UpdateCart();
     }
@@ -88,7 +100,8 @@
         let max = localStorage.length;
         if (max > 0){
             for(i=0; i<max; i++ ){
-                addCartDisplayItem(myCart,localStorage.key(i));
+                let myPayload = JSON.parse(localStorage.getItem(localStorage.key(i)));
+                addCartDisplayItem(myCart,localStorage.key(i),myPayload[0],myPayload[1],myPayload[2]);
             }
         }
         UpdateCart()
@@ -126,3 +139,17 @@
             }                
         return newElement;
     }
+    
+function attatchEvents2Courses(CourseList){
+    let aChild = CourseList.firstElementChild ;
+    console.log(aChild);
+    console.log(aChild.getAttribute('id'));
+    while (aChild != null){
+        let itsID = aChild.getAttribute('id');
+        let itsTitle = aChild.getAttribute('Titulo');
+        let itsDate = aChild.getAttribute('Fecha');
+        let itsTime = aChild.getAttribute('Horario');
+        aChild.addEventListener('click', (e) => {Add2Cart(itsID, itsTitle, itsDate, itsTime)});
+        aChild=aChild.nextElementSibling;
+    }
+}

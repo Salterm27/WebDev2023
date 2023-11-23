@@ -5,6 +5,7 @@ let misCursos = [];
 addCourse("Leadership Onboarding", "Nov 24", "10");
 addCourse("Leadership Onboarding", "Nov 30", "10");
 addCourse("Leadership Onboarding", "Dec 4", "10");
+
 addCourse("Leadership Culture", "Nov 28", "10");
 addCourse("Leadership Culture", "Nov 2", "10");
 addCourse("Leadership Culture", "Dec 13", "10");
@@ -26,9 +27,9 @@ function mountCourses(){
         let unCurso = misCursos[i];
         let nuevoDisplayCourse = createCourseDisplay(unCurso[0],unCurso[1],unCurso[2]);
 
+
         if (unCurso[0] === "Leadership Onboarding"){
             console.log('Curso de Onboarding detectado');
-
             Onboarding.appendChild(nuevoDisplayCourse);
         }
         else if (unCurso[0] === "Leadership Culture"){
@@ -45,6 +46,10 @@ function mountCourses(){
 
 function createCourseDisplay(unTitulo, unaFecha, unHorario){
     let myNewItem = SimpleElementBuilder('button','banner-cta',unTitulo +' - '+ unaFecha +' - '+ unHorario + "Hr.");
+    myNewItem.id=unTitulo +'.'+ unaFecha +'.'+ unHorario;
+    myNewItem.setAttribute('Titulo',unTitulo);
+    myNewItem.setAttribute('fecha',unaFecha);
+    myNewItem.setAttribute('horario',unHorario);
     return myNewItem;
 }
 
