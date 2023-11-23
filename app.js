@@ -22,7 +22,6 @@
         }
         else {
             let payload = JSON.stringify([aTitle,aDate,aTime]);
-            console.log(payload);
             //add to LocalStorage
             localStorage.setItem(item,payload);                           
             //add to cart display list 
@@ -33,7 +32,7 @@
 
     function addCartDisplayItem(myCart,item, Title, Time, Date){
         let myNewItem = SimpleElementBuilder('li','cart-item','');
-        myNewItem.id = item;
+        myNewItem.id = 'c'+item;
         
         //create the description
         let itsTextBox = SimpleElementBuilder ('div','cart-item-Body','');
@@ -60,7 +59,6 @@
         UpdateCart();
     }
 
-
     function RemoveFromCart (item){
         // Removes an item from the cart
         if (localStorage.getItem(item) === null ){
@@ -77,7 +75,7 @@
 
     function removeCardDisplayItem(item){
         //Remove from Cart Display List
-        let myCartItem = document.getElementById(item);
+        let myCartItem = document.getElementById('c'+item);
         myCartItem.remove();
 
         //updateCart
