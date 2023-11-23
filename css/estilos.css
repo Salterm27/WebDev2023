@@ -390,3 +390,16 @@
     color: white;
     text-align: center;
 }
+.custom-alert {
+    display: inline-block;
+    visibility: hidden;
+    background-color: #666;
+    color: #fff;
+    text-align: enter;
+    margin: 5% auto;
+    padding: 12px 48px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }

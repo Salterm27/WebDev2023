@@ -21,10 +21,11 @@
         }
         else {
             //add to LocalStorage
-            localStorage.setItem(item,'payload');               
-            
+            localStorage.setItem(item,'payload');                           
             //add to cart display list 
-            addCartDisplayItem(myCart,item);            
+            addCartDisplayItem(myCart,item);
+            //alert("Gracias por anotarte a " + item + ".");
+            notifyAction("Gracias por anotarte a " + item + ".");
         }
     }
 
@@ -32,7 +33,7 @@
         let myNewItem = SimpleElementBuilder('li','cart-item','');
         myNewItem.id = item;
         //create the description
-        let itsChild = SimpleElementBuilder ('h4','cart-item-text',item);
+        let itsChild = SimpleElementBuilder ('h5','cart-item-text',item);
         myNewItem.appendChild(itsChild);
         
         // create the button for the cart remove
@@ -78,6 +79,7 @@
         while (localStorage.key(0)!=null){
             RemoveFromCart(localStorage.key(0));
         }
+        alert("Te has retirado de todos tus cursos.")
         
     }
     function mountCart(tempFiles){
@@ -113,6 +115,7 @@
     }
 
     function SimpleElementBuilder(aType, aClass, anAttribute){
+        //simplifies the creation of html elements
         let newElement = document.createElement(aType);
             if(aClass != ''){
                 newElement.className = aClass;
@@ -122,4 +125,3 @@
             }                
         return newElement;
     }
-    
