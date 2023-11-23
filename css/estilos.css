@@ -398,6 +398,7 @@
     color: white;
     text-align: center;
     vertical-align: middle;
+    align-items: center;
 }
 .custom-alert {
     display: inline-block;
