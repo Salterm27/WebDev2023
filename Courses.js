@@ -1,5 +1,7 @@
 let misCursos = [];
 
+
+    
 addCourse("Leadership Onboarding", "Nov 24", "10");
 addCourse("Leadership Onboarding", "Nov 30", "10");
 addCourse("Leadership Onboarding", "Dec 4", "10");
@@ -18,15 +20,32 @@ function addCourse (unTitulo, unaFecha, unHorario){
 
 function mountCourses(){
     let i;
+    let Onboarding = document.getElementById('OnboardingCourses');
+    let Culture = document.getElementById('CultureCourses');
     for (i=0;i<misCursos.length;i++){
         let unCurso = misCursos[i];
-        createCourseDisplay(unCurso[0],unCurso[1],unCurso[2]);
+        let nuevoDisplayCourse = createCourseDisplay(unCurso[0],unCurso[1],unCurso[2]);
+
+        if (unCurso[0] === "Leadership Onboarding"){
+            console.log('Curso de Onboarding detectado');
+
+            Onboarding.appendChild(nuevoDisplayCourse);
+        }
+        else if (unCurso[0] === "Leadership Culture"){
+            console.log('Curso de Cultura detectado');
+            Culture.appendChild(nuevoDisplayCourse);
+
+        }
+        else{
+            console.log('El curso no fue reconocido y fue salteado');
+        }
     }
 
 }
 
 function createCourseDisplay(unTitulo, unaFecha, unHorario){
-    console.log(unTitulo + " el " + unaFecha + " a las " + unHorario + " hs.");
+    let myNewItem = SimpleElementBuilder('button','banner-cta',unTitulo +' - '+ unaFecha +' - '+ unHorario + "Hr.");
+    return myNewItem;
 }
 
 function SimpleElementBuilder(aType, aClass, anAttribute){
