@@ -88,7 +88,7 @@
     function mountCart(){
         let i;
         let myCart = document.getElementById('cart');
-        console.log(localStorage.length);
+        
         let max = localStorage.length;
         if (max > 0){
             for(i=0; i<max; i++ ){
@@ -134,8 +134,6 @@
     
 function attatchEvents2Courses(CourseList){
     let aChild = CourseList.firstElementChild ;
-    console.log(aChild);
-    console.log(aChild.getAttribute('id'));
     while (aChild != null){
         let itsID = aChild.getAttribute('id');
         let itsTitle = aChild.getAttribute('Titulo');

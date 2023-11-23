@@ -29,11 +29,9 @@ function mountCourses(){
 
 
         if (unCurso[0] === "Leadership Onboarding"){
-            console.log('Curso de Onboarding detectado');
             Onboarding.appendChild(nuevoDisplayCourse);
         }
         else if (unCurso[0] === "Leadership Culture"){
-            console.log('Curso de Cultura detectado');
             Culture.appendChild(nuevoDisplayCourse);
 
         }
