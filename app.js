@@ -1,17 +1,11 @@
     //Setup
-    //TODO OnloadOrchestration
+    //OnloadOrchestration
     let tempFiles = window.localStorage;   
     let myCart; 
     mountCart();
     attatchEvents2Courses( document.getElementById('OnboardingCourses'));
     attatchEvents2Courses(document.getElementById('CultureCourses'));
-    //TODO populateCourses.
-        // Read from JSON Config file and add the Banner CTA List. Attatch the events
-
-    //Functions
-    //TODO PackageItem
-        //stringifies an items payload
-
+    
     
     function Add2Cart(item, aTitle, aDate, aTime){
         // Read LocalStorage. If item is not there, add then Push to Cart. If item is there, dont add and alert user.
